@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="<?php language_attributes(); ?>">
     <head>
         <meta charset="utf-8">
         <title>コーディングの教科書Lesson24</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name=”description” content=”ハンドメイド猫グッズのお店ねこのもの” />
     <!-- CSS -->
+    <?php wp_head(); ?>
     </head>
 	<body>
     <!--topに戻るボタン-->
