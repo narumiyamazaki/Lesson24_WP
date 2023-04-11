@@ -1,0 +1,9 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.p-recommendation__new-item-tag__wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}

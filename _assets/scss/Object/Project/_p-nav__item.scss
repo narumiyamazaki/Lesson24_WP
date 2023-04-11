@@ -1,0 +1,12 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.p-nav__item{
+    width:calc(335/va.$sp-design-width*100vw);
+    &:not(:first-child){
+    border-top: dotted 1px va.$textColor;
+    @include mixin.mq(pc){
+        border-top: none;
+        }
+    }
+}

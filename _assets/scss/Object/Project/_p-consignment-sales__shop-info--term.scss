@@ -1,0 +1,12 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.p-consignment-sales__shop-info--term{
+    width:calc(90/va.$sp-design-width*100vw);
+    @include mixin.text-14px-bold-sp;
+    line-height: calc(21/14);
+    @include mixin.mq(pc){
+        width:calc(100/va.$pc-design-width*100vw);
+        @include mixin.text-16px-bold-pc;
+    }
+}

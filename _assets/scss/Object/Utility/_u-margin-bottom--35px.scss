@@ -1,0 +1,6 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.u-margin-bottom--35px{
+    margin-bottom:min(calc(35/va.$sp-design-width*100vw),35px);
+}

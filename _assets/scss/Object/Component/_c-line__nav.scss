@@ -1,0 +1,10 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.c-line__nav{
+    position: relative;
+    width: 1px;
+    height:10px;
+    background-color: va.$textColor;
+    margin: 5px 10px 0;
+}

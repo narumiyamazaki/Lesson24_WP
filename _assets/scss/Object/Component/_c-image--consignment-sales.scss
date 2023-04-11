@@ -1,0 +1,12 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.c-image--consignment-sales{
+    width:calc(335/va.$sp-design-width*100vw);
+    height:calc(335/va.$sp-design-width*100vw);
+    object-fit: cover;
+    @include mixin.mq(pc){
+        width:calc(440/va.$pc-design-width*100vw);
+        height:calc(303/va.$pc-design-width*100vw);
+    }
+}

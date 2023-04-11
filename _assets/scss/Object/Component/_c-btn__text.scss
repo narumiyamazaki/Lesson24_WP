@@ -1,0 +1,17 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.c-btn__text{
+    font-family: va.$baseFont;
+    //ボタンの大きさが可変ではないので、固定値に
+    font-size:12px;
+    text-align: center;
+    padding-bottom:12px;
+    color: #fff;
+    font-weight: 700;
+    display: none;
+    text-transform: uppercase;
+    &.active{
+        display: block;
+    }
+}

@@ -1,0 +1,13 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.c-footprint{
+    @include mixin.mq(pc){
+    background: url(../img/ico_paw.svg) no-repeat;
+    width:max(calc(28/va.$pc-design-width*100vw),28px);
+    height:max(calc(28/va.$pc-design-width*100vw),28px);
+    &:hover{
+        background-image: url(../img/ico_paw_o.svg);
+        }
+    }
+}

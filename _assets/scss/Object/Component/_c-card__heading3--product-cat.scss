@@ -1,0 +1,16 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.c-card__heading3--product-cat{
+    font-family: va.$baseFont;
+    font-size:clamp(16px,calc(16/va.$sp-design-width*100vw),18px);
+    color: va.$textColor;
+    line-height: calc( 44/16 );
+    font-weight: 400;
+    @include mixin.mq(tb){
+        font-size:clamp(18px,calc(18/va.$tb-design-width*100vw),20px);
+    }
+    @include mixin.mq(pc){
+        font-size:clamp(18px,calc(18/va.$pc-design-width*100vw),20px);
+    }
+}

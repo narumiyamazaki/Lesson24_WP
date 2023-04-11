@@ -1,0 +1,15 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.c-table-heading--consignment-sales{
+    width:calc(56/va.$sp-design-width*100vw);
+    font-family: va.$baseFont;
+    font-size:max(calc(14/va.$sp-design-width*100vw),14px);
+    color: va.$textColor;
+    line-height: calc( 21/14 );
+    font-weight: 700;
+    @include mixin.mq(pc){
+        font-size:max(calc(16/va.$pc-design-width*100vw),16px);
+        line-height: calc( 28/16 );
+    }
+}

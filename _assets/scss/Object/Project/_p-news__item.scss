@@ -1,0 +1,24 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.p-news__item{
+    padding:calc(14/va.$sp-design-width*100vw) 0;
+    //gridのgapを使う事でコンポーネントにマージンを持たせない 
+    display: grid;
+    gap: calc(8/va.$pc-design-width*100vw);
+    border-bottom: 1px dotted va.$underLineColor;
+    //タグについては幅を狭める
+    @include mixin.mq(pc){
+        display: flex;
+        align-items: center;
+        //多分1列にする必要がある
+        gap:0;
+        padding:calc(20/va.$pc-design-width*100vw) 0;
+        & > :first-child{
+            margin-right:calc(25/va.$pc-design-width*100vw);
+        }
+        & > :nth-child(2){
+            margin-right:calc(15/va.$pc-design-width*100vw);
+        }
+    }
+}

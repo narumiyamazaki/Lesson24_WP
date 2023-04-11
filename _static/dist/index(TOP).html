@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>コーディングの教科書Lesson24</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name=”description” content=”ハンドメイド猫グッズのお店ねこのもの” />
+    <!-- CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
+        <link href="./css/style.css" rel="stylesheet">
+    <!--jQuery-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/b8a7fea4d4.js"></script>
+    <!--google fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+	<body>
+    <!--topに戻るボタン-->
+    <header class="l-header">
+        <div class="p-header__top__container">
+            <div class="p-header__top__wrapper">
+                <h1 class="p-heading1">
+                    <img class="c-logo--top" src="./img/logo_top_header.svg" alt="ハンドメイド猫グッズのお店 ねこのもの l'atelier Queue">
+                </h1>
+                <p class="c-text--top-explanation">“Queue(クー)”は、フランス語で「しっぽ」の意味です。<br>猫にも人にも心地好いをモットーに、猫おもちゃ、雑貨を作っています。</p>
+            </div>
+            <div class="c-img--mv"></div>
+            <p class="p-nav__btn">
+                <a href="javascript:void(0)">
+                    <span>メニューを開く</span>
+                </a>
+                <span class="c-btn__text active">menu</span>
+                <span class="c-btn__text">close</span>
+            </p>
+        </div>
+        <!--gnav-->
+        <div class="p-header__nav__wrapper--sp">
+            <div class="c-logo__header__nav--sp u-margin-bottom--35px"></div>   
+            <nav class="p-header__nav__body--sp">
+                <ul class="p-header__nav__items--sp">
+                    <li class="p-nav__item"><a class="c-item__link--nav" href="#">トップページ</a></li>
+                    <li class="p-nav__item"><a class="c-item__link--nav" href="#">商品一覧</a></li>
+                    <li class="p-nav__item"><a class="c-item__link--nav" href="#">ねこブログ</a></li>
+                    <li class="p-nav__item"><a class="c-item__link--nav" href="#">ねこ店員紹介</a></li>
+                    <li class="p-nav__item"><a class="c-item__link--nav" href="#">よくあるご質問</a></li>
+                    <li class="p-nav__item"><a class="c-item__link--nav" href="#">お問い合わせ</a></li>
+                </ul>
+                <ul class="p-header__nav__items--second">
+                    <li class="p-nav__item--second"><a class="c-item__link--second-nav" href="./">特定商取引法に関する表記</a></li>
+                    <span class="c-line__nav"></span>
+                    <li class="p-nav__item--second"><a class="c-item__link--second-nav" href="./">プライバシーポリシー</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="p-header__nav__wrapper--pc">
+            <nav class="p-header__nav__body--pc">
+                <ul class="p-header__nav__items--pc">
+                    <li class="p-nav__item"><a class="c-item__link--nav" href="#">商品一覧</a></li>
+                    <li class="p-nav__item"><a class="c-item__link--nav" href="#">ねこブログ</a></li>
+                    <li class="p-nav__item"><a class="c-item__link--nav" href="#">ねこ店員紹介</a></li>
+                    <li class="p-nav__item"><a class="c-item__link--nav" href="#">よくあるご質問</a></li>
+                    <li class="p-nav__item"><a class="c-item__link--nav" href="#">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="p-main">
+        <article class="p-news">
+            <div class="p-heading2__container">
+                <span class="c-cat__img"></span>
+                <div class="p-heading__news__wrapper">
+                    <h2 class="c-heading2">お知らせ</h2>
+                    <a class="c-link__news-list">一覧へ</a>
+                </div>
+            </div>
+            <ul class="p-news__items">
+                <li class="p-news__item">
+                    <time class="c-text--datetime" datetime="2021-11-01">2021-11-01</time>
+                    <div class="p-news__tag__wrapper">
+                        <span class="c-tag__news--latest">新商品情報</span>
+                    </div>
+                    <a class="c-text--news">【焼印付】爪とぎ型キーホルダー登場！</a>
+                </li>
+                <li class="p-news__item">
+                    <time class="c-text--datetime" datetime="2021-10-28">2021-10-28</time>
+                    <div class="p-news__tag__wrapper">
+                        <span class="c-tag__news">入荷情報</span>
+                    </div>
+                    <a class="c-text--news">里親募集型猫カフェ猫式さんの委託販売ブースにアクセサリー・猫首輪・けりぐるみを納品しました。</a>
+                </li>
+                <li class="p-news__item">
+                    <time class="c-text--datetime" datetime="2021-10-12">2021-10-12</time>
+                    <div class="p-news__tag__wrapper">
+                        <span class="c-tag__news">イベント出店</span>
+                    </div>
+                    <a class="c-text--news">ニャンフェス14に参加決定。鋭意新作製作中です!</a>
+                </li>
+            </ul>
+        </article>
+        <article class="p-recommendation">
+            <div class="p-heading2__container">
+                <span class="c-cat__img"></span>
+                <div class="p-heading__news__wrapper">
+                    <h2 class="c-heading2">おすすめ商品</h2>
+                </div>
+            </div>
+            <div class="p-recommendation__card__container">
+                <section class="p-recommendation__card__wrapper">
+                    <img class="c-card__thumbnail--recommendation" alt="【焼印付】爪とぎ型キーホルダー" src="./img/dmy_pd001.jpg">
+                    <span class="c-tag__new-item">新商品</span>
+                    <dl class="p-recommendation__card__text__wrapper">
+                        <dt class="c-card__title--recommendation">【焼印付】爪とぎ型キーホルダー</dt>
+                        <dd class="c-card__text--recommendation">可愛らしいミニチュアサイズの「猫の爪とぎ」型キーホルダー。木製ケースの裏面には猫シルエットの焼印付きでオシャレ！</dd>
+                    </dl>
+                    <div class="p-card__text__price__wrapper">
+                        <span class="c-card__text--price">000円</span><span class="c-card__text--tax">(税抜)</span>
+                    </div>
+                    <a class="p-recommendation__card__link" href="#">詳細を見る<span class="c-arrow--right"></span></a>
+                </section>
+                <section class="p-recommendation__card__wrapper">
+                    <img class="c-card__thumbnail--recommendation" alt="肉球ブローチ（7個セット）" src="./img/dmy_pd002.jpg">
+                    <dl class="p-recommendation__card__text__wrapper">
+                        <dt class="c-card__title--recommendation">肉球ブローチ（7個セット）</dt>
+                        <dd class="c-card__text--recommendation">定番の肉球型のレジンブローチ（7個セット）です。</dd>
+                    </dl>
+                    <div class="p-card__text__price__wrapper">
+                        <span class="c-card__text--price">000円</span><span class="c-card__text--tax">(税抜)</span>
+                    </div>
+                    <a class="p-recommendation__card__link" href="#">詳細を見る<span class="c-arrow--right"></span></a>
+                </section>
+                <section class="p-recommendation__card__wrapper">
+                    <img class="c-card__thumbnail--recommendation" alt="レース猫首輪（鈴付き）" src="./img/dmy_pd003.jpg">
+                    <dl class="p-recommendation__card__text__wrapper">
+                        <dt class="c-card__title--recommendation">レース猫首輪（鈴付き）</dt>
+                        <dd class="c-card__text--recommendation">アースカラーのレース＋アンティーク調の金具でシックな印象の猫首輪です。</dd>
+                    </dl>
+                    <div class="p-card__text__price__wrapper">
+                        <span class="c-card__text--price">000円</span><span class="c-card__text--tax">(税抜)</span>
+                    </div>
+                    <a class="p-recommendation__card__link" href="#">詳細を見る<span class="c-arrow--right"></span></a>
+                </section>
+            </div>
+        </article>
+        <article class="p-product-cat">
+            <div class="p-heading2__container">
+                <span class="c-cat__img"></span>
+                <div class="p-heading__news__wrapper">
+                    <h2 class="c-heading2">商品カテゴリー</h2>
+                </div>
+            </div>
+            <ul class="p-product-cat__card__container">
+                <li class="p-product-cat__card__wrapper">
+                    <a class="p-product-cat__card__link" href="#">
+                        <div class="c-card__thumbnail__product-cat cat-resin"></div>
+                        <h3 class="c-card__heading3--product-cat u-margin-left--20px">レジンブローチ</h3>
+                    </a>
+                </li>
+                <li class="p-product-cat__card__wrapper">
+                    <a class="p-product-cat__card__link" href="#">
+                        <div class="c-card__thumbnail__product-cat cat-collar"></div>
+                        <h3 class="c-card__heading3--product-cat u-margin-left--20px">猫用首輪</h3>
+                    </a>
+                </li>
+                <li class="p-product-cat__card__wrapper">
+                    <a class="p-product-cat__card__link" href="#">
+                        <div class="c-card__thumbnail__product-cat cat-stuffed-toy"></div>
+                        <h3 class="c-card__heading3--product-cat u-margin-left--20px">けりぐるみ</h3>
+                    </a>
+                </li>
+                <li class="p-product-cat__card__wrapper">
+                    <a class="p-product-cat__card__link" href="#">
+                        <div class="c-card__thumbnail__product-cat cat-accessories"></div>
+                        <h3 class="c-card__heading3--product-cat u-margin-left--20px">アクセサリー</h3>
+                    </a>
+                </li>
+                <li class="p-product-cat__card__wrapper">
+                    <a class="p-product-cat__card__link" href="#">
+                        <div class="c-card__thumbnail__product-cat cat-other"></div>
+                        <h3 class="c-card__heading3--product-cat u-margin-left--20px">その他雑貨</h3>
+                    </a>
+                </li>
+            </ul>
+        </article>
+        <article class="p-consignment-sales">                
+            <h2 class="c-heading2--consignment-sales">委託販売先</h2>
+            <p class="p-consignment-sales__text c-text--basic">当店は現在以下の3店舗のレンタルボックスにて委託販売をさせていただいております。<br>商品を実際に手にとってお確かめいただけますので、お近くの方はお気軽にお立ち寄り下さい。</p>
+            <!--notionテンプレートパーツ用-->
+            <div class="p-consignment-sales__content__wrapper">
+                <div class="p-consignment-sales__content">
+                    <img class="c-image--consignment-sales" src="./img/img_rental_kuroneko_douhua.jpg" alt="台湾スイーツ豆花専門黒猫豆花様外観">
+                    <div class="p-consignment-sales__shop-info__container">
+                        <h3 class="p-consignment-sales-heading3">台湾スイーツ豆花専門&nbsp;黒猫豆花&nbsp;様</h3>
+                        <dl class="p-consignment-sales__shop-info__wrapper">
+                            <div class="p-consignment-sales__shop-info">
+                                <dt class="p-consignment-sales__shop-info--term">住所</dt>
+                                <dd class="p-consignment-sales__shop-info--description">神奈川県川崎市高津区二子2丁目7-40<span class="u-margin-left--8px"></span>フォーレスト多摩川102</dd>
+                            </div>
+                            <div class="p-consignment-sales__shop-info">
+                                <dt class="p-consignment-sales__shop-info--term">営業時間</dt>
+                                <dd class="p-consignment-sales__shop-info--description">10:00-21:00（時短営業中は20:00まで）</dd>
+                            </div>
+                            <div class="p-consignment-sales__shop-info">
+                                <dt class="p-consignment-sales__shop-info--term">定休日</dt>
+                                <dd class="p-consignment-sales__shop-info--description">水曜日</dd>
+                            </div>
+                            <div class="p-consignment-sales__shop-info">
+                                <dt class="p-consignment-sales__shop-info--term">website</dt>
+                                <dd class="p-consignment-sales__shop-info--description"><a class="c-text--basic" href="https://kuroneko-douhua.com/">https://kuroneko-douhua.com/</a></dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+                <div class="p-consignment-sales__content">
+                    <img class="c-image--consignment-sales" src="./img/img_rental_mayscafe.jpg" alt="May's Cafe -ハンドメイド雑貨&CAFE- 様">
+                    <div class="p-consignment-sales__shop-info__container">
+                        <h3 class="p-consignment-sales-heading3">May&lsquo;&nbsp;Cafe&nbsp;-ハンドメイド雑貨&amp;CAFE-&nbsp;様</h3>
+                        <dl class="p-consignment-sales__shop-info__wrapper">
+                            <div class="p-consignment-sales__shop-info">
+                                <dt class="p-consignment-sales__shop-info--term">住所</dt>
+                                <dd class="p-consignment-sales__shop-info--description">東京都世田谷区太子堂5-17-20-1F</dd>
+                            </div>
+                            <div class="p-consignment-sales__shop-info">
+                                <dt class="p-consignment-sales__shop-info--term">営業時間</dt>
+                                <dd class="p-consignment-sales__shop-info--description">土日祝日11:00〜19:00のみ営業中</dd>
+                            </div>
+                            <div class="p-consignment-sales__shop-info">
+                                <dt class="p-consignment-sales__shop-info--term">定休日</dt>
+                                <dd class="p-consignment-sales__shop-info--description">月〜金曜日</dd>
+                            </div>
+                            <div class="p-consignment-sales__shop-info">
+                                <dt class="p-consignment-sales__shop-info--term"></dt>
+                                <dd class="p-consignment-sales__shop-info--description"><a class="c-text--basic" href="https://www.instagram.com/mays._.cafe/">https://www.instagram.com/mays._.cafe/</a></dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+                <div class="p-consignment-sales__content">
+                    <img class="c-image--consignment-sales" src="./img/img_rental_nekoshiki.jpg" alt="里親募集型猫カフェ 猫式 様">
+                    <div class="p-consignment-sales__shop-info__container">
+                        <h3 class="p-consignment-sales-heading3">里親募集型猫カフェ&nbsp;猫式&nbsp;様</h3>
+                        <dl class="p-consignment-sales__shop-info__wrapper">
+                            <div class="p-consignment-sales__shop-info">
+                                <dt class="p-consignment-sales__shop-info--term">住所</dt>
+                                <dd class="p-consignment-sales__shop-info--description">神奈川県川崎市高津区溝口1-20-10 東方ビル3F</dd>
+                            </div>
+                            <div class="p-consignment-sales__shop-info">
+                                <dt class="p-consignment-sales__shop-info--term">営業時間</dt>
+                                <dd class="p-consignment-sales__shop-info--description">12:00～20:00（最終受付19:30）</dd>
+                            </div>
+                            <div class="p-consignment-sales__shop-info">
+                                <dt class="p-consignment-sales__shop-info--term">定休日</dt>
+                                <dd class="p-consignment-sales__shop-info--description">月曜日</dd>
+                            </div>
+                            <div class="p-consignment-sales__shop-info">
+                                <dt class="p-consignment-sales__shop-info--term">Website</dt>
+                                <dd class="p-consignment-sales__shop-info--description"><a class="c-text--basic" href="https://www.neko-shiki.net/">https://www.neko-shiki.net/</a></dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="p-profile">
+            <h2 class="p-profile__heading2">プロフィール</h2>
+            <img class="p-profile__img" src="./img/img_profile.jpg" alt="プロフィール画像(右へのぞき込むねこの正面画像)">
+            <p class="p-profile__sns-user-name">@latelierqueue</p>
+            <p class="p-profile__text">猫雑貨・猫おもちゃ、その他ハンドメイド<br>時々農家になります。</p>
+            <div class="p-profile__icon__wrapper">
+                <a class="c-icon--twitter" href="#"></a>
+                <a class="c-icon--Instagram" href="#"></a>
+            </div>
+        </article>
+    </main>
+    <footer class="l-footer">
+        <button id="js-pagetop" class="c-button__scroll-top" type="button"></button>
+        <!--ロゴ・ナビメニューのwrapper-->
+        <div class="p-footer__contents__wrapper">
+            <img class="p-footer__logo" src="./img/logo_footer.svg" alt="">
+            <!--ナビメニューのwrapper-->
+            <nav class="p-footer__nav__wrapper">
+                <ul class="p-footer__nav__items--top">
+                    <li class="p-footer__nav__item"><a class="c-footer__nav__item--link" href="./" >トップページ</a></li>
+                    <li class="p-footer__nav__item"><a class="c-footer__nav__item--link" href="./" >商品一覧</a></li>
+                    <li class="p-footer__nav__item"><a class="c-footer__nav__item--link" href="./" >ねこブログ</a></li>
+                    <li class="p-footer__nav__item"><a class="c-footer__nav__item--link" href="./" >ねこ店員紹介</a></li>
+                    <li class="p-footer__nav__item"><a class="c-footer__nav__item--link" href="./" >よくあるご質問</a></li>
+                    <li class="p-footer__nav__item"><a class="c-footer__nav__item--link" href="./" >お問い合わせ</a></li>
+                </ul>
+                <ul class="p-footer__nav__items--bottom">
+                    <li class="p-footer__nav__item--bottom"><a class="c-footer__nav__item--link footer-bottom" href="./">特定商取引法に関する表記</a></li>
+                    <li class="p-footer__nav__item--bottom"><a class="c-footer__nav__item--link footer-bottom" href="./">プライバシーポリシー</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!--SNSがナビゲーションメニューの下に来る場合はここに記述-->
+        <small class="p-footer__right">&copy;l'atelier&nbsp;Queue&nbsp;All&nbsp;Rights&nbsp;Reserved.&nbsp;2021</span></small>
+    </footer>
+    <script src="js/index.js"></script>
+    <script src="js/on.click.js"></script>
+	</body>
+</html>

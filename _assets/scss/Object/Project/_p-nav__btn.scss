@@ -1,0 +1,80 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.p-nav__btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top:calc(-23/va.$sp-design-width*100vw);
+    margin-right:calc(10/va.$sp-design-width*100vw);
+    align-self: flex-end;
+    width: 70px;
+    height: 70px;
+    background-color: va.$textColor;
+    border-radius: 50%;
+    position:fixed;
+    bottom:19px;
+    &:hover{
+        background-color: va.$hoverColor;
+    }
+    @include mixin.mq(pc){
+        display: none;
+    }
+    > a {
+        display: block;
+    }
+    > a::before {
+        position:absolute;
+        top: 20px;
+        left: 20px;
+        content: "";
+        width: 30px;
+        height: 2px;
+        background-color:#fff;
+        transition: .2s;
+    }
+    > a > span {
+        display: block;
+        overflow: hidden;
+        width: 1px;
+        height: 1px;
+    }
+    > a > span::after{
+        position:absolute;
+        top: 28px;
+        left: 20px;
+        content: "";
+        width: 30px;
+        height: 2px;
+        background-color:#fff;
+        transition: .2s;
+    }
+    > a::after {
+        position:absolute;
+        bottom: 32px;
+        left: 20px;
+        content: "";
+        width: 30px;
+        height: 2px;
+        background-color:#fff;
+    }
+    //ハンバーガーメニューのボタンを押したときの挙動
+    > a.open::before {
+        top: 24px;
+        transform: rotate(-45deg);
+    }
+    > a.open::after {
+        display:none;
+    }
+    > a.open > span::after {
+        bottom: 24px;
+        transform: rotate(-135deg);
+    }
+}
+
+.p-nav__btn.open{
+    z-index: 999;
+    & a > span::after{
+        top: 24px;
+    }
+}

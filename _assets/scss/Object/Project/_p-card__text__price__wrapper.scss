@@ -1,0 +1,9 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.p-card__text__price__wrapper{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top:auto;
+}

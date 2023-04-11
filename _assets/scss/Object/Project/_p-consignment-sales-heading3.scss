@@ -1,0 +1,21 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.p-consignment-sales-heading3{
+    font-family: va.$baseFont;
+    font-size:max(calc(20/va.$sp-design-width*100vw),20px);
+    color: #fff;
+    line-height: calc( 28/20 );
+    background-color: va.$textColor;
+    padding:calc(11/va.$sp-design-width*100vw) 0 calc(11/va.$sp-design-width*100vw) calc(10/va.$sp-design-width*100vw);
+    //width:calc(300/va.$sp-design-width*100vw);
+    //letter-spacing: calc(/1000 * 1em);
+    font-weight: 700;
+    width: 100%;
+    margin-bottom:calc(20/va.$sp-design-width*100vw);
+    @include mixin.mq(pc){
+        padding:calc(8/va.$pc-design-width*100vw) 0 calc(8/va.$pc-design-width*100vw) calc(20/va.$pc-design-width*100vw);
+        font-size:max(20px,calc(16/va.$pc-design-width*100vw));
+        margin-bottom:calc(30/va.$pc-design-width*100vw);
+    }
+}

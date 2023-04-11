@@ -1,0 +1,14 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.c-text--datetime{
+    font-family: va.$baseFont;
+    font-size:clamp(16px,calc(16/va.$sp-design-width*100vw),18px);
+    color: va.$textColor;
+    font-weight: 400;
+    line-height: calc( 24/16 );
+    white-space: nowrap;
+    @include mixin.mq(pc){
+        font-size:clamp(16px,calc(16/va.$pc-design-width*100vw),18px);
+    }
+}

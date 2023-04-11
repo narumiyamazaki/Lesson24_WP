@@ -1,0 +1,12 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.p-footer__right{
+    @include mixin.text-12px-regular-sp;
+    color:#fff;
+    line-height: calc(28/12);
+    @include mixin.mq(pc){
+        @include mixin.text-12px-regular-pc;
+        color:#fff;
+    }
+}

@@ -1,0 +1,11 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.p-profile__sns-user-name{
+    @include mixin.text-16px-bold-sp;
+    margin-bottom:calc(20/va.$sp-design-width*100vw);
+    @include mixin.mq(pc){
+        margin-bottom:calc(20/va.$pc-design-width*100vw);
+        @include mixin.text-16px-bold-pc;
+    }
+}

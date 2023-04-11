@@ -1,0 +1,17 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.p-product-cat{
+    width:calc(335/va.$sp-design-width*100vw);
+    margin: 0 auto calc(80/va.$sp-design-width*100vw);
+    /*
+    @include mixin.mq(tb){
+        width:calc(1084/va.$tb-design-width*100vw);
+        margin:0 auto calc(100/va.$tb-design-width*100vw);
+    }
+    */
+    @include mixin.mq(pc){
+        width:calc(1084/va.$pc-design-width*100vw);
+        margin:0 auto calc(100/va.$tb-design-width*100vw);
+    }
+}

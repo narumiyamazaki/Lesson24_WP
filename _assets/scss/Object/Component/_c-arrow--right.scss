@@ -1,0 +1,12 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.c-arrow--right{
+        display: inline-block;
+        width:8px;
+        height:8px;
+        margin-right:8px;
+        transform:rotate(45deg);
+        border-top:2px solid va.$textColor;
+        border-right:2px solid va.$textColor;
+    }

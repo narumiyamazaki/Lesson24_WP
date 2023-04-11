@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+@use './foundation/_base.scss';
+//extendやmixinは下層ファイルでも読み込むのでforwardにする
+@forward './foundation/_extend';
+@use './Foundation/mixin';
+@use './Layout/indexLayout';
+@use './object/Project/indexProject';
+@use './object/Component/indexComponent';
+@use './object/Utility/indexUtility';

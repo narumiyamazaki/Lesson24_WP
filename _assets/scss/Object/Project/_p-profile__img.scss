@@ -1,0 +1,14 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.p-profile__img{
+    width:calc(140/va.$sp-design-width*100vw);
+    height:calc(140/va.$sp-design-width*100vw);
+    object-fit: contain;
+    margin-bottom:calc(20/va.$sp-design-width*100vw);
+    @include mixin.mq(pc){
+        margin-bottom:calc(20/va.$pc-design-width*100vw);
+        width:calc(140/va.$pc-design-width*100vw);
+        height:calc(140/va.$pc-design-width*100vw);
+    }
+}

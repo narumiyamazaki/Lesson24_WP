@@ -1,0 +1,23 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.c-button__scroll-top{
+    position: absolute;
+    bottom:64px;
+    background: url(../img/page-top.png) no-repeat;
+    width:calc(80/va.$sp-design-width*100vw);
+    height:calc(80/va.$sp-design-width*100vw);
+    background-size: contain;
+    right:calc(8/va.$sp-design-width*100vw);
+    top:calc(-57/va.$sp-design-width*100vw);
+    @include mixin.mq(pc){
+    width:calc(80/va.$pc-design-width*100vw);
+    height:calc(80/va.$pc-design-width*100vw);
+    right:calc(20/va.$pc-design-width*100vw);
+    top:calc(-57/va.$pc-design-width*100vw);
+    }
+    &:hover{
+        background: url(../img/page-top-hover.png) no-repeat;
+        background-size:contain;
+    }
+}

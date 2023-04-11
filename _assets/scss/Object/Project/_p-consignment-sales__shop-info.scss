@@ -1,0 +1,17 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.p-consignment-sales__shop-info{
+    display: flex;
+    justify-content: space-between;
+    width:max(335/va.$sp-design-width*100vw);
+    &:not(:last-child){
+        margin-bottom:calc(15/va.$sp-design-width*100vw);
+        @include mixin.mq(pc){
+            margin-bottom: 0;
+        }
+    }
+    @include mixin.mq(pc){
+        width:max(624/va.$pc-design-width*100vw);
+    }
+}

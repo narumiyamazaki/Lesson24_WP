@@ -1,0 +1,54 @@
+//page-top-btn
+@use './c-button__scroll-top';
+
+
+//header
+@use './c-logo--top';
+@use './c-text--top-explanation';
+@use './c-img--mv';
+
+//header-nav
+@use './c-logo__header__nav--sp';
+@use './c-item__link--nav';
+@use './c-item__link--second-nav';
+@use './c-line__nav';
+@use './c-btn__text';
+
+//header-nav-pc
+@use './c-footprint';
+
+//news
+@use './c-cat__img';
+@use './c-heading2';
+@use './c-text--news';
+@use './c-text--datetime';
+@use './c-tag__news';
+@use './c-link__news-list';
+
+//recommendation
+@use './c-card__text--recommendation';
+@use './c-card__thumbnail--recommendation';
+@use './c-card__title--recommendation';
+@use './c-tag__new-item';
+@use './c-card__text--price';
+@use './c-card__text--tax';
+@use './c-arrow--right';
+
+//Category
+@use './c-card__thumbnail__product-cat';
+@use './c-card__heading3--product-cat';
+
+//consignment-sales
+@use './c-heading2--consignment-sales';
+@use './c-image--consignment-sales';
+@use './c-text--basic';
+@use './c-big-table-heading';
+@use './c-table-heading--consignment-sales';
+
+//profile
+@use './c-icon--twitter';
+@use './c-icon--Instagram';
+@use './c-footer__nav__item--link';
+
+//footer
+@use './c-footer__nav__line';

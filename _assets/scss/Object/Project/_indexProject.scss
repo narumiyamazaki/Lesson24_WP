@@ -1,0 +1,71 @@
+//header
+@use './p-header__top__wrapper';
+@use './p-header__top__container';
+
+//nav
+@use './p-header__nav__items--sp';
+@use './p-header__nav__wrapper--sp';
+
+@use './p-nav__item';
+
+@use './p-nav__btn';
+@use './p-header__nav__wrapper--pc';
+@use './p-header__nav__items--pc';
+@use './p-header__nav__items--second';
+
+//news
+@use './p-news';
+@use './p-heading2__container';
+@use './p-heading__news__wrapper';
+@use './p-news__items';
+@use './p-news__item';
+
+//recommendition
+@use './p-recommendation';
+@use './p-recommendation__card__container';
+@use './p-recommendation__card__wrapper';
+@use './p-recommendation__new-item-tag__wrapper';
+@use './p-recommendation__card__text__wrapper';
+@use './p-card__text__price__wrapper';
+@use './p-recommendation__card__link';
+
+//main
+@use './_p-main.scss';
+
+//common
+@use './p-heading2__wrapper';
+
+//category
+@use './p-product-cat';
+@use './p-product-cat__card__wrapper';
+@use './p-product-cat__card__container';
+@use './p-product-cat__card__link';
+
+//consignment-sales
+@use './p-consignment-sales';
+@use './p-consignment-sales__content__wrapper';
+@use './p-consignment-sales__content';
+@use './p-consignment-sales__shop-info__container';
+@use './p-consignment-sales__text';
+@use './p-consignment-sales__shop-info';
+@use './p-consignment-sales__shop-info--term';
+@use './p-consignment-sales__shop-info--description';
+@use './p-consignment-sales-heading3';
+
+//profile
+@use './p-profile';
+@use './p-profile__heading2';
+@use './p-profile__img';
+@use './p-profile__sns-user-name';
+@use './p-profile__text';
+@use './p-profile__icon__wrapper';
+
+//footer
+@use './p-footer__logo';
+@use './p-footer__contents__wrapper';
+@use './p-footer__nav__wrapper';
+@use './p-footer__nav__item';
+@use './p-footer__nav__items--top';
+@use './p-footer__nav__items--bottom';
+@use './p-footer__right';
+@use './p-footer__nav__item--bottom';

@@ -1,0 +1,19 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.c-text--top-explanation{
+    font-family: va.$baseFont;
+    font-size:clamp(16px,calc(16/va.$sp-design-width*100vw),18px);
+    color: va.$textColor;
+    font-weight: 400;
+    border-top: 1px solid va.$textColor;
+    border-bottom: 1px solid va.$textColor;
+    padding:calc(30/va.$sp-design-width*100vw) 0 calc(50/va.$sp-design-width*100vw);
+    line-height: calc( 28.8/16 );
+    @include mixin.mq(pc){
+        font-size:clamp(16px,calc(16/va.$pc-design-width*100vw),18px);
+        width:max(625/va.$pc-design-width*100vw);
+        padding:calc(45/va.$pc-design-width*100vw) 0 calc(40/va.$pc-design-width*100vw) calc(55/va.$pc-design-width*100vw);
+        margin:calc(30/va.$pc-design-width*100vw) 0;
+    }   
+}

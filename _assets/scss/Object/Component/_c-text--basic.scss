@@ -1,0 +1,18 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.c-text--basic{
+    font-family: va.$baseFont;
+    font-size:clamp(16px,calc(16/va.$sp-design-width*100vw),18px);
+    color: va.$textColor;
+    line-height: calc( 28/16 );
+    //width:calc(300/va.$sp-design-width*100vw);
+    //letter-spacing: calc(/1000 * 1em);
+    font-weight: 400;
+    text-align: center;
+    width:calc(335/va.$sp-design-width*100vw);
+    @include mixin.mq(pc){
+        width:calc(1084/va.$pc-design-width*100vw);
+        font-size:clamp(16px,calc(16/va.$sp-design-width*100vw),18px);
+    }
+}

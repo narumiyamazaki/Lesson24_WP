@@ -1,0 +1,16 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.p-footer__nav__item--bottom{
+    //width:calc(335/va.$sp-design-width*100vw);
+    &:not(:first-child){
+        border-left: solid 1px#fff;
+    }
+    @include mixin.mq(pc){
+        width: auto;
+        display:inline-block;
+        &:not(:first-child){
+            border-left: solid 1px#fff;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.c-card__thumbnail__product-cat{
+   width:calc(120/va.$sp-design-width*100vw);
+   height:calc(120/va.$sp-design-width*100vw);
+   background-size: cover;
+   @include mixin.mq(tb){
+    width:calc(120/va.$pc-design-width*100vw);
+    height:calc(120/va.$pc-design-width*100vw);
+}
+   @include mixin.mq(pc){
+        width:calc(120/va.$pc-design-width*100vw);
+        height:calc(120/va.$pc-design-width*100vw);
+   }
+}
+
+.cat-resin{
+    background-image: url(../img/thumb_cat-resin.jpg);
+}
+
+.cat-collar{
+    background-image: url(../img/thumb_cat-collar.jpg);
+}
+
+.cat-stuffed-toy{
+    background-image: url(../img/thumb_cat-stuffed-toy.jpg);
+}
+
+.cat-accessories{
+    background-image: url(../img/thumb_cat-accessories.jpg);
+}
+
+.cat-other{
+    background-image: url(../img/thumb_cat-other.jpg);
+}

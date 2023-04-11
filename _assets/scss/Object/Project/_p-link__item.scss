@@ -1,0 +1,28 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.p-news__item__link{
+    &:first-child{
+        padding:calc(13.5/va.$sp-design-width*100vw) 0;
+    }
+    &:nth-child(2){
+        padding:calc(13.5/va.$sp-design-width*100vw) 0 calc(34.5/va.$sp-design-width*100vw);
+    }
+    &:nth-child(3){
+        padding:calc(13.5/va.$sp-design-width*100vw) 0 calc(35.5/va.$sp-design-width*100vw);
+    }
+    &:not(:last-child){
+        border-bottom: 1px solid va.$underLineColor;
+    }
+    @include mixin.mq(pc){
+        &:first-child{
+            padding:calc(20.5/va.$sp-design-width*100vw) 0;
+        }
+        &:nth-child(2){
+            padding:calc(22.5/va.$sp-design-width*100vw) 0 calc(16.5/va.$sp-design-width*100vw);
+        }
+        &:nth-child(3){
+            padding:calc(21.5/va.$sp-design-width*100vw) 0 calc(117.5/va.$sp-design-width*100vw);
+        }   
+    }
+}

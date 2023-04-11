@@ -1,0 +1,13 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.c-icon--Instagram{
+    background: url(../img/sns_insta.png) no-repeat;
+    width:calc(80/va.$sp-design-width*100vw);
+    height:calc(80/va.$sp-design-width*100vw);
+    background-size: contain;
+    @include mixin.mq(pc){
+    width:calc(80/va.$pc-design-width*100vw);
+    height:calc(80/va.$pc-design-width*100vw);
+    }  
+}

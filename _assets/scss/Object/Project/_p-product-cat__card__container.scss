@@ -1,0 +1,15 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.p-product-cat__card__container{
+        display: grid;
+        gap: calc(20/va.$sp-design-width*100vw);
+    @include mixin.mq(tb){
+        gap: calc(20/va.$tb-design-width*100vw);
+        grid-template-columns: repeat(2,1fr);
+    }
+    @include mixin.mq(pc){
+        grid-template-columns: repeat(3,1fr);
+        gap: calc(20/va.$pc-design-width*100vw);
+    }
+}

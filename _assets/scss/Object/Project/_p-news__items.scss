@@ -1,0 +1,6 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.p-news__items{
+    border-top:1px dotted va.$underLineColor;
+}

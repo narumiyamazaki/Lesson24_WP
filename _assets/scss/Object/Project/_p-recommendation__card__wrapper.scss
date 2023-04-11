@@ -1,0 +1,29 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.p-recommendation__card__wrapper{
+    display: inline-block;
+    margin-bottom:calc(20/va.$sp-design-width*100vw);
+    padding:calc(20/va.$sp-design-width*100vw) calc(15/va.$sp-design-width*100vw);
+    position: relative;
+    //新商品のタグはoverflow:hiddenで消える？
+    overflow: hidden;
+    border: 1px solid #DDDDDD;
+    &:last-child{
+        margin-bottom:0;
+    }
+    @include mixin.mq(tb){
+        margin-bottom: 0;
+        width:calc((100% - (20px * 2)) / 3 );
+        display: flex;
+        flex-direction: column;
+        margin-right:20px;
+        padding:calc(20/va.$tb-design-width*100vw) calc(15/va.$tb-design-width*100vw);
+        &:last-child{
+            margin-right:0;
+        }   
+    }
+    @include mixin.mq(pc){
+        padding:calc(20/va.$pc-design-width*100vw) calc(15/va.$pc-design-width*100vw);
+    }
+}

@@ -1,0 +1,20 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.c-card__thumbnail--recommendation{
+    width:calc(305/va.$sp-design-width*100vw);
+    height:calc(182/va.$sp-design-width*100vw);
+    background-size:contain;
+    margin-bottom:calc(25/va.$sp-design-width*100vw);
+    object-fit: cover;
+    @include mixin.mq(tb){
+        width: 100%;
+        height:min((190/va.$tb-design-width*100vw), 192px);
+        margin-bottom:calc(25/va.$tb-design-width*100vw);
+    }
+    @include mixin.mq(pc){
+        width:calc(318/va.$pc-design-width*100vw);
+        height:calc(190/va.$pc-design-width*100vw);
+        margin-bottom:calc(27/va.$pc-design-width*100vw);
+    }
+}

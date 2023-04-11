@@ -1,0 +1,14 @@
+@use '../../Foundation/mixin';
+
+.p-sub-menu__items {
+    display: none;
+    position: absolute;
+}
+
+.p-sub-menu__items.open{
+    display: block;
+    position:static;
+    @include mixin.mq(pc){
+        position: absolute;
+    }
+}

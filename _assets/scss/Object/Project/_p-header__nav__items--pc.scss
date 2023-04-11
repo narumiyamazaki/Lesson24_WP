@@ -1,0 +1,9 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.p-header__nav__items--pc{
+    width:max(930/va.$pc-design-width*100vw,930px);
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+}

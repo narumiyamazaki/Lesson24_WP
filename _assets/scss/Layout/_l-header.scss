@@ -1,0 +1,27 @@
+@use '../Foundation/vars' as va;
+@use '../Foundation/mixin';
+
+.l-header {
+    //display: flex;
+    //align-items: center;
+    //justify-content: space-between;
+    //flex-direction: column;
+    padding-top:calc(10/va.$sp-design-width*100vw);
+
+    //padding:calc(10/va.$sp-design-width*100vw) calc(20/va.$sp-design-width*100vw) 0;
+    margin:0 auto calc(80/va.$pc-design-width*100vw);
+    //ハンバーガーメニューを開いたときはheaderを固定
+    &.active{
+    position:fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: va.$areaColor;
+    }
+    @include mixin.mq(pc){
+        display: block;
+        margin-bottom:calc(100/va.$pc-design-width*100vw);
+        padding:0;
+    }
+}

@@ -1,0 +1,11 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.p-header__nav__items--sp {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-top: dotted 1px va.$textColor;
+    border-bottom: dotted 1px va.$textColor;
+    margin-bottom:min(45/va.$sp-design-width*100vw,45px);
+}

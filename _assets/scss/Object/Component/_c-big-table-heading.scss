@@ -1,0 +1,16 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.c-big-table-heading{
+    font-family: va.$baseFont;
+    font-size:max(calc(20/va.$sp-design-width*100vw),20px);
+    color: #fff;
+    line-height: calc( 28/20 );
+    //width:calc(300/va.$sp-design-width*100vw);
+    //letter-spacing: calc(/1000 * 1em);
+    font-weight: 700;
+    width: 100%;
+    @include mixin.mq(pc){
+        font-size:max(20px,calc(16/va.$pc-design-width*100vw));
+    }
+}

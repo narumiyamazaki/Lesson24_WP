@@ -1,0 +1,22 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.c-link__news-list{
+    font-family: va.$baseFont;
+    font-size:max(calc(13/va.$sp-design-width*100vw),13px);
+    color: #fff;
+    line-height: calc( 20/13 );
+    font-weight: 500;
+    padding:calc(5/va.$sp-design-width*100vw) calc(25/va.$sp-design-width*100vw);
+    background-color: va.$textColor;
+    align-self: center;
+    border-radius: 6px;
+    &:hover{
+        background-color: va.$hoverColor;
+    }
+    @include mixin.mq(pc){
+        padding:calc(5/va.$pc-design-width*100vw) calc(25/va.$pc-design-width*100vw);
+        font-size:max(calc(16/va.$pc-design-width*100vw),16px);
+        line-height: calc( 24/16 );
+    }
+}

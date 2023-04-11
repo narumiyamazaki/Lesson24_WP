@@ -1,0 +1,132 @@
+@use './vars' as va;
+
+$breakpoint: (
+  sp: 'screen and (max-width: 767px)',
+  tb: 'screen and (min-width: 768px)',
+  pc: 'screen and (min-width: 1025px)'
+);
+
+@mixin mq($bp) {
+  @media #{map-get($breakpoint, $bp)} {
+   @content;
+  }
+}
+
+@mixin text-12px-regular-sp{
+  font-family: va.$baseFont;
+  font-size:min((12/va.$sp-design-width*100vw),12px);
+  color: va.$textColor;
+  font-weight: 400;
+}
+
+@mixin text-12px-regular-pc{
+  font-family: va.$baseFont;
+  font-size:max((12/va.$pc-design-width*100vw),12px);
+  color: va.$textColor;
+  font-weight: 400;
+}
+
+@mixin text-13px-bold-sp{
+  font-family: va.$baseFont;
+  font-size:min((13/va.$sp-design-width*100vw),13px);
+  color: va.$textColor;
+  font-weight: 700;
+}
+
+@mixin text-14px-regular-sp{
+  font-family: va.$baseFont;
+  font-size:min((14/va.$sp-design-width*100vw),14px);
+  color: va.$textColor;
+  font-weight: 400;
+}
+
+@mixin text-14px-regular-pc{
+  font-family: va.$baseFont;
+  font-size:max((14/va.$pc-design-width*100vw),14px);
+  color: va.$textColor;
+  font-weight: 400;
+}
+
+@mixin text-14px-bold-sp{
+  font-family: va.$baseFont;
+  font-size:min((14/va.$sp-design-width*100vw),14px);
+  color: va.$textColor;
+  font-weight: 700;
+}
+
+@mixin text-14px-regular-pc{
+  font-family: va.$baseFont;
+  font-size:max((14/va.$pc-design-width*100vw),14px);
+  color: va.$textColor;
+  font-weight: 400;
+}
+
+@mixin text-16px-regular-sp{
+  font-family: va.$baseFont;
+  font-size:min((16/va.$sp-design-width*100vw),16px);
+  color: va.$textColor;
+  font-weight: 400;
+}
+
+@mixin text-16px-regular-pc{
+  font-family: va.$baseFont;
+  font-size:max((16/va.$pc-design-width*100vw),16px);
+  color: va.$textColor;
+  font-weight: 400;
+}
+
+@mixin text-16px-bold-sp{
+  font-family: va.$baseFont;
+  font-size:max((16/va.$sp-design-width*100vw),16px);
+  color: va.$textColor;
+  font-weight: 700;
+}
+
+@mixin text-16px-bold-pc{
+  font-family: va.$baseFont;
+  font-size:max((16/va.$pc-design-width*100vw),16px);
+  color: va.$textColor;
+  font-weight: 700;
+}
+
+@mixin text-18px-regular-pc{
+  font-family: va.$baseFont;
+  font-size:max((18/va.$pc-design-width*100vw),18px);
+  color: va.$textColor;
+  font-weight: 400;
+}
+
+@mixin text-18px-bold-pc{
+  font-family: va.$baseFont;
+  font-size:max((18/va.$pc-design-width*100vw),18px);
+  color: va.$textColor;
+  font-weight: 700;
+}
+
+@mixin text-20px-regular-pc{
+  font-family: va.$baseFont;
+  font-size:max((20/va.$pc-design-width*100vw),20px);
+  color: va.$textColor;
+  font-weight: 400;
+}
+
+@mixin text-20px-bold-pc{
+  font-family: va.$baseFont;
+  font-size:max((20/va.$pc-design-width*100vw),20px);
+  color: va.$textColor;
+  font-weight: 700;
+}
+
+@mixin text-24px-bold-sp{
+  font-family: va.$baseFont;
+  font-size:min((24/va.$sp-design-width*100vw),24px);
+  color: va.$textColor;
+  font-weight: 700;
+}
+
+@mixin text-30px-bold-pc{
+  font-family: va.$baseFont;
+  font-size:max((30/va.$sp-design-width*100vw),30px);
+  color: va.$textColor;
+  font-weight: 700;
+}

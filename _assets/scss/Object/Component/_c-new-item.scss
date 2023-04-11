@@ -1,0 +1,23 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.c-tag__new-item{
+    position: absolute;
+    left:0;
+    top:0;
+    transform: rotate(-45deg);
+    color:#fff;
+    background-color: va.$newColor;
+    font-size:max(calc(14/va.$sp-design-width*100vw),14px);
+    font-weight: 700;
+    width:calc(80/va.$sp-design-width*100vw);
+    height:calc(83/va.$sp-design-width*100vw);
+    @include mixin.mq(tb){
+        width:calc(80/va.$tb-design-width*100vw);
+        height:calc(83/va.$tb-design-width*100vw);
+    }
+    @include mixin.mq(pc){
+        width:calc(80/va.$tb-design-width*100vw);
+        height:calc(83/va.$tb-design-width*100vw);
+    }
+}

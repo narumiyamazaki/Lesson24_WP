@@ -1,0 +1,12 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.p-recommendation__card__text__wrapper{
+    margin-bottom:calc(25/va.$sp-design-width*100vw);
+    @include mixin.mq(tb){
+        margin-bottom:calc(25/va.$tb-design-width*100vw);  
+    }
+    @include mixin.mq(pc){
+        margin-bottom:calc(25/va.$pc-design-width*100vw);
+    }
+}

@@ -1,0 +1,13 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.c-text--news{
+    @include mixin.text-16px-regular-sp;
+    @include mixin.mq(pc){
+        @include mixin.text-16px-regular-pc;
+    }
+    &:hover{
+        color: va.$hoverColor;
+        text-decoration: underline va.$hoverColor;
+    }
+}

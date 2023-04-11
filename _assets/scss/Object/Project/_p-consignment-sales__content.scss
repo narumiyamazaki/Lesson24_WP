@@ -1,0 +1,15 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.p-consignment-sales__content{
+    width:calc(335/va.$sp-design-width*100vw);
+    margin: 0 auto;
+    display: grid;
+    gap: calc(20/va.$sp-design-width*100vw);;
+    @include mixin.mq(pc){
+        width:calc(1084/va.$pc-design-width*100vw);
+        display: flex;
+        gap:0;
+        justify-content: space-between;
+    }
+}

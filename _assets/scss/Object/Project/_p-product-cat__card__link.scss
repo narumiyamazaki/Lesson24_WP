@@ -1,0 +1,7 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.p-product-cat__card__link{
+    display: flex;
+    align-items: center;
+}

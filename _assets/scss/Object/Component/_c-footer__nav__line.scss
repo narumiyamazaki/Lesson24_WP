@@ -1,0 +1,11 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.c-footer__nav__line{
+    @include mixin.mq(pc){
+        width: 1px;
+        height:14px;
+        background-color: #fff;
+        display: inline-block;
+    }
+}

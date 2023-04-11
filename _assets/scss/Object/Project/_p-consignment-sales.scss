@@ -1,0 +1,19 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.p-consignment-sales{
+    background-color: va.$areaColor;
+    padding:calc(75/va.$sp-design-width*100vw) 0 calc(80/va.$sp-design-width*100vw);
+    margin-bottom:calc(75/va.$sp-design-width*100vw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mixin.mq(tb){
+        padding:calc(95/va.$tb-design-width*100vw) 0 calc(100/va.$tb-design-width*100vw);
+        margin-bottom:calc(95/va.$tb-design-width*100vw);
+    }
+    @include mixin.mq(pc){
+        padding:calc(95/va.$pc-design-width*100vw) 0 calc(100/va.$pc-design-width*100vw);
+        margin-bottom:calc(95/va.$pc-design-width*100vw);
+    }
+}

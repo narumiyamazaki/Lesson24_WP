@@ -1,0 +1,9 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.c-logo__header__nav--sp{
+    background: url(../img/logo_small.svg) no-repeat;
+    width:76px;
+    height:103px;
+    background-size: cover;
+}

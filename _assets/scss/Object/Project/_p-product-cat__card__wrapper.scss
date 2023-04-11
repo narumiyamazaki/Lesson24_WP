@@ -1,0 +1,30 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.p-product-cat__card__wrapper{
+    border: 1px solid #DDDDDD;
+    &:hover{
+        border-color: va.$hoverColor;
+    }
+    &:hover > .p-product-cat__card__link{
+        background-color: va.$areaColor;
+    }
+    @include mixin.mq(tb){
+        width:max(348/va.$tb-design-width*100vw);
+    }
+    @include mixin.mq(pc){
+        width:max(348/va.$pc-design-width*100vw);
+    }
+    /*grid gapで対応？
+
+    &:not(:last-child){
+        margin-bottom:calc(20/va.$sp-design-width*100vw);
+        @include mixin.mq(tb){
+            margin-bottom:calc(20/va.$tb-design-width*100vw);
+        }
+        @include mixin.mq(pc){
+            margin-bottom:calc(20/va.$pc-design-width*100vw);
+        }
+    }
+    */
+}

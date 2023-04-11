@@ -1,0 +1,31 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.c-footer__nav__item--link{
+    font-family: va.$baseFont;
+    color: #fff;
+    font-weight: 400;
+    width:100%;
+    //margin-right:calc(16/va.$sp-design-width*100vw);
+    font-size: 14px;
+    text-align: center;
+    //height:calc(45/va.$sp-design-width*100vw);
+    //aタグがインライン要素なので高さを揃えるためにflexに
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: calc(42/14);
+    @include mixin.mq(pc){
+        //width:calc(150/va.$pc-design-width*100vw);
+        line-height: calc(28/12);
+        font-size: max((12/va.$pc-design-width*100vw),12px);
+        display: block;
+        padding:0 calc(10/va.$pc-design-width*100vw);
+    }
+    &:hover{
+        color: va.$hoverColor;
+    }
+    &.footer-bottom{
+        padding: 0 calc(10/va.$sp-design-width*100vw);
+    }
+}
