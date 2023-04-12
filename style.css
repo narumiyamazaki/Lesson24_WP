@@ -1370,7 +1370,7 @@ footer.is-action{
 .c-button__scroll-top {
   position: absolute;
   bottom: 64px;
-  background: url(../img/page-top.png) no-repeat;
+  background: url("./img/page-top.png") no-repeat;
   width: 21.3333333333vw;
   height: 21.3333333333vw;
   background-size: contain;
@@ -1386,7 +1386,7 @@ footer.is-action{
   }
 }
 .c-button__scroll-top:hover {
-  background: url(../img/page-top-hover.png) no-repeat;
+  background: url("./img/page-top-hover.png") no-repeat;
   background-size: contain;
 }
 

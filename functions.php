@@ -14,7 +14,7 @@ function portfolio_script(){
     $locale = get_locale();
     $locale = apply_filters('theme_locale',$locale,'Lesson24');
     wp_enqueue_style('GoogleFonts','https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
-    wp_enqueue_style('reset-style',get_theme_file_uri('https://unpkg.com/destyle.css@1.0.5/destyle.css'),array(),'1.0.0');
+    wp_enqueue_style('reset-style','https://cdn.jsdelivr.net/npm/destyle.css@4.0.0/destyle.css',array(),'1.0.0');
     wp_enqueue_style('style',get_theme_file_uri('/style.css'),array(),'1.0.0');
     wp_enqueue_script('jQuery','https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js','','3.6.1',true);
     wp_enqueue_script('index',get_theme_file_uri('/js/index.js'),array('jQuery'),'1.0.0',true);

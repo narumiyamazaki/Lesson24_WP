@@ -4,7 +4,7 @@
 .c-button__scroll-top{
     position: absolute;
     bottom:64px;
-    background: url(../img/page-top.png) no-repeat;
+    background: url("./img/page-top.png") no-repeat;
     width:calc(80/va.$sp-design-width*100vw);
     height:calc(80/va.$sp-design-width*100vw);
     background-size: contain;
@@ -17,7 +17,7 @@
     top:calc(-57/va.$pc-design-width*100vw);
     }
     &:hover{
-        background: url(../img/page-top-hover.png) no-repeat;
+        background: url("./img/page-top-hover.png") no-repeat;
         background-size:contain;
     }
 }
