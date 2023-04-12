@@ -11,6 +11,7 @@ const browserSync = require("browser-sync"); //ブラウザリロード
 const srcBase = '../_static/src';
 const assetsBase = '../_assets';
 const distBase = '../_static/dist';
+const direct = '../';
 
 
 const srcPath = {
@@ -19,9 +20,11 @@ const srcPath = {
 };
 
 const distPath = {
-  'css': distBase + '/css/',
+  'css': direct,
   'html': distBase + '/'
 };
+
+
 
 /**
  * sass
@@ -37,6 +40,7 @@ const cssSass = () => {
         errorHandler: notify.onError('Error:<%= error.message %>')
       }))
     .pipe(sass({ outputStyle: 'expanded' })) //指定できるキー expanded compressed
+    //.pipe(gulp.dest(distPath.css, { sourcemaps: './' })) //コンパイル先
     .pipe(gulp.dest(distPath.css, { sourcemaps: './' })) //コンパイル先
     .pipe(browserSync.stream())
     .pipe(notify({

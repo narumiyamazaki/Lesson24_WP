@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="<?php language_attributes(); ?>">
     <head>
         <meta charset="utf-8">
         <title>コーディングの教科書Lesson24</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name=”description” content=”ハンドメイド猫グッズのお店ねこのもの” />
     <!-- CSS -->
+    <?php wp_head(); ?>
     </head>
 	<body>
     <!--topに戻るボタン-->
@@ -13,7 +14,7 @@
         <div class="p-header__top__container">
             <div class="p-header__top__wrapper">
                 <h1 class="p-heading1">
-                    <img class="c-logo--top" src="./img/logo_top_header.svg" alt="ハンドメイド猫グッズのお店 ねこのもの l'atelier Queue">
+                    <img class="c-logo--top" src="<?php echo get_theme_file_uri("./img/logo_top_header.svg") ?>" alt="ハンドメイド猫グッズのお店 ねこのもの l'atelier Queue">
                 </h1>
                 <p class="c-text--top-explanation">“Queue(クー)”は、フランス語で「しっぽ」の意味です。<br>猫にも人にも心地好いをモットーに、猫おもちゃ、雑貨を作っています。</p>
             </div>
