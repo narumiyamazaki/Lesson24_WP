@@ -41,7 +41,7 @@
             </div>
             <div class="p-recommendation__card__container">
                 <section class="p-recommendation__card__wrapper">
-                    <img class="c-card__thumbnail--recommendation" alt="【焼印付】爪とぎ型キーホルダー" src="./img/dmy_pd001.jpg">
+                    <img class="c-card__thumbnail--recommendation" alt="【焼印付】爪とぎ型キーホルダー" src="<?php echo get_theme_file_uri("./img/dmy_pd001.jpg")?>">
                     <span class="c-tag__new-item">新商品</span>
                     <dl class="p-recommendation__card__text__wrapper">
                         <dt class="c-card__title--recommendation">【焼印付】爪とぎ型キーホルダー</dt>
@@ -53,7 +53,7 @@
                     <a class="p-recommendation__card__link" href="#">詳細を見る<span class="c-arrow--right"></span></a>
                 </section>
                 <section class="p-recommendation__card__wrapper">
-                    <img class="c-card__thumbnail--recommendation" alt="肉球ブローチ（7個セット）" src="./img/dmy_pd002.jpg">
+                    <img class="c-card__thumbnail--recommendation" alt="肉球ブローチ（7個セット）" src="<?php echo get_theme_file_uri("./img/dmy_pd002.jpg"); ?> ">
                     <dl class="p-recommendation__card__text__wrapper">
                         <dt class="c-card__title--recommendation">肉球ブローチ（7個セット）</dt>
                         <dd class="c-card__text--recommendation">定番の肉球型のレジンブローチ（7個セット）です。</dd>
@@ -64,7 +64,7 @@
                     <a class="p-recommendation__card__link" href="#">詳細を見る<span class="c-arrow--right"></span></a>
                 </section>
                 <section class="p-recommendation__card__wrapper">
-                    <img class="c-card__thumbnail--recommendation" alt="レース猫首輪（鈴付き）" src="./img/dmy_pd003.jpg">
+                    <img class="c-card__thumbnail--recommendation" alt="レース猫首輪（鈴付き）" src="<?php echo get_theme_file_uri("./img/dmy_pd003.jpg") ?>"> 
                     <dl class="p-recommendation__card__text__wrapper">
                         <dt class="c-card__title--recommendation">レース猫首輪（鈴付き）</dt>
                         <dd class="c-card__text--recommendation">アースカラーのレース＋アンティーク調の金具でシックな印象の猫首輪です。</dd>
@@ -122,7 +122,7 @@
             <!--notionテンプレートパーツ用-->
             <div class="p-consignment-sales__content__wrapper">
                 <div class="p-consignment-sales__content">
-                    <img class="c-image--consignment-sales" src="./img/img_rental_kuroneko_douhua.jpg" alt="台湾スイーツ豆花専門黒猫豆花様外観">
+                    <img class="c-image--consignment-sales" src="<?php echo get_theme_file_uri("./img/img_rental_kuroneko_douhua.jpg");?>" alt="台湾スイーツ豆花専門黒猫豆花様外観">
                     <div class="p-consignment-sales__shop-info__container">
                         <h3 class="p-consignment-sales-heading3">台湾スイーツ豆花専門&nbsp;黒猫豆花&nbsp;様</h3>
                         <dl class="p-consignment-sales__shop-info__wrapper">
@@ -146,7 +146,7 @@
                     </div>
                 </div>
                 <div class="p-consignment-sales__content">
-                    <img class="c-image--consignment-sales" src="./img/img_rental_mayscafe.jpg" alt="May's Cafe -ハンドメイド雑貨&CAFE- 様">
+                    <img class="c-image--consignment-sales" src="<?php echo get_theme_file_uri("./img/img_rental_mayscafe.jpg"); ?>" alt="May's Cafe -ハンドメイド雑貨&CAFE- 様">
                     <div class="p-consignment-sales__shop-info__container">
                         <h3 class="p-consignment-sales-heading3">May&lsquo;&nbsp;Cafe&nbsp;-ハンドメイド雑貨&amp;CAFE-&nbsp;様</h3>
                         <dl class="p-consignment-sales__shop-info__wrapper">
@@ -170,7 +170,7 @@
                     </div>
                 </div>
                 <div class="p-consignment-sales__content">
-                    <img class="c-image--consignment-sales" src="./img/img_rental_nekoshiki.jpg" alt="里親募集型猫カフェ 猫式 様">
+                    <img class="c-image--consignment-sales" src="<?php echo get_theme_file_uri("./img/img_rental_nekoshiki.jpg"); ?>" alt="里親募集型猫カフェ 猫式 様">
                     <div class="p-consignment-sales__shop-info__container">
                         <h3 class="p-consignment-sales-heading3">里親募集型猫カフェ&nbsp;猫式&nbsp;様</h3>
                         <dl class="p-consignment-sales__shop-info__wrapper">
@@ -197,7 +197,7 @@
         </article>
         <article class="p-profile">
             <h2 class="p-profile__heading2">プロフィール</h2>
-            <img class="p-profile__img" src="./img/img_profile.jpg" alt="プロフィール画像(右へのぞき込むねこの正面画像)">
+            <img class="p-profile__img" src="<?php echo get_theme_file_uri("./img/img_profile.jpg"); ?>" alt="プロフィール画像(右へのぞき込むねこの正面画像)">
             <p class="p-profile__sns-user-name">@latelierqueue</p>
             <p class="p-profile__text">猫雑貨・猫おもちゃ、その他ハンドメイド<br>時々農家になります。</p>
             <div class="p-profile__icon__wrapper">

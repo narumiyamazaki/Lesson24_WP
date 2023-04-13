@@ -9,7 +9,7 @@ function dequeue_jquery_migrate( $scripts){
 }
 
 //CSS等の読み込み
-function portfolio_script(){
+function lesson24_script(){
 		//言語をどこにするか
     $locale = get_locale();
     $locale = apply_filters('theme_locale',$locale,'Lesson24');
@@ -20,11 +20,11 @@ function portfolio_script(){
     wp_enqueue_script('index',get_theme_file_uri('/js/index.js'),array('jQuery'),'1.0.0',true);
     //wp_enqueue_script('index',get_theme_file_uri('/js/index.js'),array('jQuery'),'1.0.0',true);
     //wp_enqueue_script('nav-height',get_theme_file_uri('/js/nav-height.js'),array('jQuery'),'1.0.0',true);
-    //wp_enqueue_script('on.click',get_theme_file_uri('/js/on.click.js'),array('jQuery'),'1.0.0',true);  
+    wp_enqueue_script('on.click',get_theme_file_uri('/js/on.click.js'),array('jQuery'),'1.0.0',true);  
 }
 
 //アクションフック(porfolio_scripts)への登録
-add_action('wp_enqueue_scripts', 'portfolio_script');
+add_action('wp_enqueue_scripts', 'lesson24_script');
 
 //テーマサポート
 function custom_theme_support(){
@@ -48,7 +48,7 @@ add_action('after_setup_theme','custom_theme_support');
 
 function add_additional_class_on_li($classes, $item, $args) {
     if(isset($args->add_li_class)) {
-        $classes[] = $args->add_li_class;
+        $classes['class'] = $args->add_li_class;
     }
     return $classes;
 }

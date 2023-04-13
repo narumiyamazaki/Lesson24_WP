@@ -1422,9 +1422,9 @@ footer.is-action{
 }
 
 .c-img--mv {
-  width: 1000vw;
+  width: 100vw;
   height: 53.3333333333vw;
-  background: url(./img/bg_top_header.jpg) no-repeat;
+  background: url("./img/bg_top_header.jpg") no-repeat;
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -1436,7 +1436,7 @@ footer.is-action{
 }
 
 .c-logo__header__nav--sp {
-  background: url(../img/logo_small.svg) no-repeat;
+  background: url("./img/logo_small.svg") no-repeat;
   width: 76px;
   height: 103px;
   background-size: cover;
@@ -1520,7 +1520,7 @@ footer.is-action{
 }
 
 .c-cat__img {
-  background: url(../img/ico_cat.svg) no-repeat;
+  background: url("./img/ico_cat.svg") no-repeat;
   width: 5.6vw;
   height: 12.2666666667vw;
   background-size: contain;
@@ -1770,23 +1770,23 @@ footer.is-action{
 }
 
 .cat-resin {
-  background-image: url(../img/thumb_cat-resin.jpg);
+  background-image: url("./img/thumb_cat-resin.jpg");
 }
 
 .cat-collar {
-  background-image: url(../img/thumb_cat-collar.jpg);
+  background-image: url("./img/thumb_cat-collar.jpg");
 }
 
 .cat-stuffed-toy {
-  background-image: url(../img/thumb_cat-stuffed-toy.jpg);
+  background-image: url("./img/thumb_cat-stuffed-toy.jpg");
 }
 
 .cat-accessories {
-  background-image: url(../img/thumb_cat-accessories.jpg);
+  background-image: url("./img/thumb_cat-accessories.jpg");
 }
 
 .cat-other {
-  background-image: url(../img/thumb_cat-other.jpg);
+  background-image: url("./img/thumb_cat-other.jpg");
 }
 
 .c-card__heading3--product-cat {

@@ -2,7 +2,7 @@
 @use '../../Foundation/mixin';
 
 .c-cat__img{
-    background: url(../img/ico_cat.svg) no-repeat;
+    background: url("./img/ico_cat.svg") no-repeat;
     width:calc(21/va.$sp-design-width*100vw);
     height:calc(46/va.$sp-design-width*100vw);
     background-size: contain;

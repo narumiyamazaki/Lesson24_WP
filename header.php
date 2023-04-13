@@ -2,7 +2,6 @@
 <html lang="<?php language_attributes(); ?>">
     <head>
         <meta charset="utf-8">
-        <title>コーディングの教科書Lesson24</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name=”description” content=”ハンドメイド猫グッズのお店ねこのもの” />
     <!-- CSS -->
@@ -57,4 +56,17 @@
                 </ul>
             </nav>
         </div>
+        <?php 
+            wp_nav_menu( array(
+                'theme_location' => 'header_nav',
+                'container' => 'nav',
+                'container_class' => 'p-header__nav',
+                //ulタグへclassを追加
+                'menu_class' => 'p-header__nav__main-menu',
+                //liタグへclassを追加
+                'add_li_class' => 'p-header__nav__main-menu__item',
+                // aタグへclass追加
+                'add_a_class' => 'nav-link text-white',
+            ));
+        ?>
     </header>
