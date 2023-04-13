@@ -40,26 +40,14 @@
                 </ul>
                 <ul class="p-header__nav__items--second">
                     <li class="p-nav__item--second"><a class="c-item__link--second-nav" href="./">特定商取引法に関する表記</a></li>
-                    <span class="c-line__nav"></span>
                     <li class="p-nav__item--second"><a class="c-item__link--second-nav" href="./">プライバシーポリシー</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="p-header__nav__wrapper--pc">
-            <nav class="p-header__nav__body--pc">
-                <ul class="p-header__nav__items--pc">
-                    <li class="p-nav__item"><a class="c-item__link--nav" href="#">商品一覧</a></li>
-                    <li class="p-nav__item"><a class="c-item__link--nav" href="#">ねこブログ</a></li>
-                    <li class="p-nav__item"><a class="c-item__link--nav" href="#">ねこ店員紹介</a></li>
-                    <li class="p-nav__item"><a class="c-item__link--nav" href="#">よくあるご質問</a></li>
-                    <li class="p-nav__item"><a class="c-item__link--nav" href="#">お問い合わせ</a></li>
                 </ul>
             </nav>
         </div>
         <div class="p-header__nav__wrapper--pc">
             <?php 
                 wp_nav_menu( array(
-                    'theme_location' => 'header_nav-sp',
+                    'theme_location' => 'header_nav-pc',
                     'container' => 'nav',
                     'container_class' => 'p-header__nav__body--pc',
                     //ulタグへclassを追加

@@ -1,0 +1,8 @@
+@use '../../Foundation/vars' as va;
+@use '../../Foundation/mixin';
+
+.p-nav__item--second{
+    &:not(:first-child){
+        border-left: solid 1px va.$textColor;
+    }
+}

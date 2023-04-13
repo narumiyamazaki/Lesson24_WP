@@ -39,7 +39,8 @@ function custom_theme_support(){
     register_nav_menus(array(
 				'header_nav-sp' => esc_html__('header navigation SP','header-nav-sp'),
         'header_nav-pc' => esc_html__('header navigation PC','header-nav-pc'),
-        'footer_nav' => esc_html__('footer navigation','footer-nav'),    
+        'footer_nav' => esc_html__('footer navigation','footer-nav'),
+        'header_footer_subMenu' => esc_html__('header footer subMenu','header_footer_subMenu'),
     ));
     //ブロックエディターの有効化
     add_theme_support('editor-style');

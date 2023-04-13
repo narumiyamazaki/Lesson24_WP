@@ -767,6 +767,10 @@ footer.is-action{
   justify-content: center;
 }
 
+.p-nav__item--second:not(:first-child) {
+  border-left: solid 1px #341E12;
+}
+
 .p-news {
   width: 89.3333333333vw;
   margin: 0 auto 21.3333333333vw;
@@ -1464,14 +1468,14 @@ footer.is-action{
   color: #A88E25;
 }
 .c-item__link--nav:hover::before {
-  background-image: url(../img/ico_paw_o.svg);
+  background-image: url("./img/ico_paw_o.svg");
 }
 .c-item__link--nav::before {
   content: "";
   width: 1.75vw;
   height: 1.75vw;
   background-size: contain;
-  background-image: url(../img/ico_paw.svg);
+  background-image: url("./img/ico_paw.svg");
   margin-right: 0.375vw;
 }
 
@@ -1481,6 +1485,7 @@ footer.is-action{
   font-weight: 400;
   width: 100%;
   font-size: clamp(12px, 3.2vw, 14px);
+  padding: 0 2.6666666667vw;
 }
 .c-item__link--second-nav:hover {
   color: #A88E25;

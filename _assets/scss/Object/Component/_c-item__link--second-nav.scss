@@ -7,6 +7,7 @@
     font-weight: 400;
     width:100%;
     font-size: clamp(12px,calc(12/va.$sp-design-width*100vw),14px);
+    padding: 0 calc(10/va.$sp-design-width*100vw);
     &:hover{
         color:va.$hoverColor
     }
