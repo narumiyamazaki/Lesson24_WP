@@ -56,17 +56,17 @@
                 </ul>
             </nav>
         </div>
-        <?php 
-            wp_nav_menu( array(
-                'theme_location' => 'header_nav',
-                'container' => 'nav',
-                'container_class' => 'p-header__nav',
-                //ulタグへclassを追加
-                'menu_class' => 'p-header__nav__main-menu',
-                //liタグへclassを追加
-                'add_li_class' => 'p-header__nav__main-menu__item',
-                // aタグへclass追加
-                'add_a_class' => 'nav-link text-white',
-            ));
-        ?>
+        <div class="p-header__nav__wrapper--pc">
+            <?php 
+                wp_nav_menu( array(
+                    'theme_location' => 'header_nav-sp',
+                    'container' => 'nav',
+                    'container_class' => 'p-header__nav__body--pc',
+                    //ulタグへclassを追加
+                    'menu_class' => 'p-header__nav__items--pc',
+                    //liタグへclassを追加
+                    'add_li_class' => 'p-nav__item',
+                ));
+            ?>
+        </div>
     </header>

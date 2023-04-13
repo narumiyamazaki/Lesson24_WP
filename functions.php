@@ -35,8 +35,10 @@ function custom_theme_support(){
     add_theme_support('title-tag');
     //カスタムメニューの有効化
     add_theme_support('menus');
+    //header.phpのtheme_locationは'header_nav_sp'とかの方
     register_nav_menus(array(
-				'header_nav' => esc_html__('header navigation','header-nav'),
+				'header_nav-sp' => esc_html__('header navigation SP','header-nav-sp'),
+        'header_nav-pc' => esc_html__('header navigation PC','header-nav-pc'),
         'footer_nav' => esc_html__('footer navigation','footer-nav'),    
     ));
     //ブロックエディターの有効化
@@ -46,17 +48,19 @@ function custom_theme_support(){
 }
 add_action('after_setup_theme','custom_theme_support');
 
+//navメニューのliタグに任意のクラス名を付与する(付与するのは、header.phpのwp_nav_menuにて)
 function add_additional_class_on_li($classes, $item, $args) {
     if(isset($args->add_li_class)) {
-        $classes['class'] = $args->add_li_class;
+        $classes[] = $args->add_li_class;
     }
     return $classes;
 }
 add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
 
+//navメニューのaタグに任意のクラス名を付与する
 add_filter('walker_nav_menu_start_el', 'add_class_on_link', 10, 4);
  function add_class_on_link($item_output, $item){
- return preg_replace('/(<a.*?)/', '$1' . " class='p-header__nav__main-menu__item-link'", $item_output);
+ return preg_replace('/(<a.*?)/', '$1' . " class='c-item__link--nav'", $item_output);
 }
 
 /* ---------- カスタム投稿の追加 ---------- */
