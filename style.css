@@ -1470,13 +1470,15 @@ footer.is-action{
 .c-item__link--nav:hover::before {
   background-image: url("./img/ico_paw_o.svg");
 }
-.c-item__link--nav::before {
-  content: "";
-  width: 1.75vw;
-  height: 1.75vw;
-  background-size: contain;
-  background-image: url("./img/ico_paw.svg");
-  margin-right: 0.375vw;
+@media screen and (min-width: 1025px) {
+  .c-item__link--nav::before {
+    content: "";
+    width: 1.75vw;
+    height: 1.75vw;
+    background-size: contain;
+    background-image: url("./img/ico_paw.svg");
+    margin-right: 0.375vw;
+  }
 }
 
 .c-item__link--second-nav {

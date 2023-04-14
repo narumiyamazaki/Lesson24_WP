@@ -58,11 +58,23 @@ function add_additional_class_on_li($classes, $item, $args) {
 }
 add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
 
+//navメニューのaタグに任意のクラス名を付与する(付与するのは、header.phpのwp_nav_menuにて)
+function add_additional_class_on_a($classes, $item, $args)
+{
+  if (isset($args->add_li_class)) {
+    $classes['class'] = $args->add_a_class;
+  }
+  return $classes;
+}
+add_filter('nav_menu_link_attributes', 'add_additional_class_on_a', 1, 3);
+
+/*
 //navメニューのaタグに任意のクラス名を付与する
 add_filter('walker_nav_menu_start_el', 'add_class_on_link', 10, 4);
  function add_class_on_link($item_output, $item){
  return preg_replace('/(<a.*?)/', '$1' . " class='c-item__link--nav'", $item_output);
 }
+*/
 
 /* ---------- カスタム投稿の追加 ---------- */
 function create_post_type() {
@@ -106,6 +118,26 @@ add_action( 'init', function () {
       ]
   );
 });
+
+//お知らせ用のカスタム投稿作成用コード
+//functions.phpに記述
+function create_post_type_news(){
+  register_post_type( 
+   'news',
+   array(
+    'labels' => array(
+     'name' => 'News'
+    ),
+    'public' => true,
+    'has_archive' => true,
+    'supports' => array('title','editor','thumbnail','author'),
+    'show_in_rest' => true,
+   )
+  );
+ }
+ add_action( 'init', 'create_post_type_news' );
+
+
 add_action('pre_get_posts', function ($query){
   if ( is_admin() && ! $query->is_main_query() ) {
       return;

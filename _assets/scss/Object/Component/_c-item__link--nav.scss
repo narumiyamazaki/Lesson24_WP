@@ -27,11 +27,13 @@
         }
     }
     &::before{
+        @include mixin.mq(pc){
         content:'';
         width:calc(28/va.$pc-design-width*100vw);
         height:calc(28/va.$pc-design-width*100vw);
         background-size: contain;
         background-image: url("./img/ico_paw.svg");
         margin-right:calc(6/va.$pc-design-width*100vw);
+        }
     }
 }

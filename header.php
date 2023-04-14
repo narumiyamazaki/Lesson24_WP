@@ -28,21 +28,32 @@
         </div>
         <!--gnav-->
         <div class="p-header__nav__wrapper--sp">
-            <div class="c-logo__header__nav--sp u-margin-bottom--35px"></div>   
-            <nav class="p-header__nav__body--sp">
-                <ul class="p-header__nav__items--sp">
-                    <li class="p-nav__item"><a class="c-item__link--nav" href="#">トップページ</a></li>
-                    <li class="p-nav__item"><a class="c-item__link--nav" href="#">商品一覧</a></li>
-                    <li class="p-nav__item"><a class="c-item__link--nav" href="#">ねこブログ</a></li>
-                    <li class="p-nav__item"><a class="c-item__link--nav" href="#">ねこ店員紹介</a></li>
-                    <li class="p-nav__item"><a class="c-item__link--nav" href="#">よくあるご質問</a></li>
-                    <li class="p-nav__item"><a class="c-item__link--nav" href="#">お問い合わせ</a></li>
-                </ul>
-                <ul class="p-header__nav__items--second">
-                    <li class="p-nav__item--second"><a class="c-item__link--second-nav" href="./">特定商取引法に関する表記</a></li>
-                    <li class="p-nav__item--second"><a class="c-item__link--second-nav" href="./">プライバシーポリシー</a></li>
-                </ul>
-            </nav>
+            <div class="c-logo__header__nav--sp u-margin-bottom--35px"></div>
+            <?php 
+                wp_nav_menu( array(
+                    'theme_location' => 'header_nav-sp',
+                    'container' => 'nav',
+                    'container_class' => 'p-header__nav__body--sp',
+                    //ulタグへclassを追加
+                    'menu_class' => 'p-header__nav__items--sp',
+                    //liタグへclassを追加
+                    'add_li_class' => 'p-nav__item',
+                    //aタグへclassを追加
+                    'add_a_class' => 'c-item__link--nav',
+                ));
+            ?>
+            <?php 
+                wp_nav_menu( array(
+                    'theme_location' => 'header_footer_subMenu',
+                    'container' => 'false',
+                    //ulタグへclassを追加
+                    'menu_class' => 'p-header__nav__items--second',
+                    //liタグへclassを追加
+                    'add_li_class' => 'p-nav__item--second',
+                    //aタグへclassを追加
+                    'add_a_class' => 'c-item__link--second-nav',
+                ));
+            ?>
         </div>
         <div class="p-header__nav__wrapper--pc">
             <?php 
@@ -54,6 +65,8 @@
                     'menu_class' => 'p-header__nav__items--pc',
                     //liタグへclassを追加
                     'add_li_class' => 'p-nav__item',
+                    //aタグへclassを追加
+                    'add_a_class' => 'c-item__link--nav',
                 ));
             ?>
         </div>
