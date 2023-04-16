@@ -132,11 +132,55 @@ function create_post_type_news(){
     'has_archive' => true,
     'supports' => array('title','editor','thumbnail','author'),
     'show_in_rest' => true,
+    'taxonomies' => array( 'category' )
    )
   );
  }
  add_action( 'init', 'create_post_type_news' );
 
+ //shortcodeの作成
+ function shortcode_news_list() {
+  global $post;
+  $args = array(
+   'posts_per_page' => 3,  // 一覧に表示させる件数
+   'post_type' => 'news',  // お知らせのスラッグ
+   'post_status' => 'publish'
+  );
+  $the_query = new WP_Query( $args );
+  
+  // お知らせ一覧用HTMLコード作成
+  // .=について(結合代入演算子)
+  if ( $the_query->have_posts() ) {
+   $html = '<ul class"p-news__items">';
+   while ( $the_query->have_posts() ) :
+   $the_query->the_post();
+   $url = get_permalink();
+   $title = get_the_title();
+   $date = get_the_date('Y/m/d');
+   $html .= '<li class="p-news__item">';
+   $html .= '<p class="c-text--datetime datetime='.$date.'">'.$date.'</time>';
+   $html .= '<div class="p-news__tag__wrapper">';
+   if( has_category( '新商品' ) ){
+    $html .= '<span class="c-tag__news--latest">入荷情報</span>';
+   }else{
+      $html .= '<span class="c-tag__news">入荷情報</span>';
+   }
+   /*
+   if(has_tag('新商品')){
+    $html .= '<span class="c-tag__news--latest">入荷情報</span>';
+   }else{
+      $html .= '<span class="c-tag__news">入荷情報</span>';
+    }
+    */
+   $html .= '</div>';
+   $html .= '<a class="c-text--news" href="'.$url.'">'.$title.'</a>';   
+   $html .= '</li>';
+   endwhile;
+   $html .= '</ul>';
+  }
+  return $html;
+ }
+ add_shortcode("news_list", "shortcode_news_list");
 
 add_action('pre_get_posts', function ($query){
   if ( is_admin() && ! $query->is_main_query() ) {
@@ -146,3 +190,50 @@ add_action('pre_get_posts', function ($query){
       $query->set('post_type', ['post','works']);
   }
 });
+
+//お知らせ用のカスタム投稿作成用コード
+//functions.phpに記述
+function create_post_type_recommend(){
+  register_post_type( 
+   'recommend',
+   array(
+    'labels' => array(
+     'name' => 'recommend'
+    ),
+    'public' => true,
+    'has_archive' => true,
+    'supports' => array('title','editor','thumbnail','author'),
+    'show_in_rest' => true,
+    'taxonomies' => array( 'category' )
+   )
+  );
+ }
+ add_action( 'init', 'create_post_type_recommend');
+
+ //お知らせ用のカスタム投稿作成用コード
+//functions.phpに記述
+function create_post_type_items(){
+  register_post_type( 
+   'items',
+   array(
+    'labels' => array(
+     'name' => '商品一覧'
+    ),
+    'public' => true,
+    'has_archive' => true,
+    'supports' => array('title','editor','thumbnail','author'),
+    'show_in_rest' => true,
+    'taxonomies' => array( 'category' )
+   )
+  );
+  register_taxonomy(
+    'items-slug',
+    'items', // 機能を追加したいカスタム投稿タイプ名
+    array(
+      'public' => true,
+      'show_in_rest' => true,
+      'rewrite' => array( 'slug' => 'items' ),
+    )
+  );
+ }
+ add_action( 'init', 'create_post_type_items');

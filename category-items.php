@@ -1,4 +1,3 @@
-<?php get_header(); ?>
 <main class="p-main">
     <article class="p-news">
         <div class="p-heading2__container">
